@@ -26,4 +26,25 @@ The project is organized as follows:
    pip install dbt-core
 2. **Configure Snowflake**:
 Update profiles.yml with your Snowflake credentials.
+3. **Load Data into Snowflake**:
+Create and load the raw_ecommerce_data table with the CSV data.
+4. **Run dbt Models**:
+   ```bash
+   dbt run
+5. **Run Data Quality Tests**:
+   ```bash
+   dbt test
+6. **Generate and Serve documentation**:
+    ```bash
+   dbt docs generate
+   dbt docs serve
+
+## Github Submission
+
+1. **Commit and push changes**:
+   ```bash
+   git add .
+   git commit -m "Initial Commit"
+   git push origin main
+  
 
