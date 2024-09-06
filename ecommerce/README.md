@@ -1,15 +1,21 @@
-Welcome to your new dbt project!
+# Overview
 
-### Using the starter project
+This project demonstrates how to transform e-commerce transaction data into a star schema using dbt Core and Snowflake. The dataset consists of 10,000 rows of e-commerce transaction data, which includes information about transactions, customers, products, and sales.
 
-Try running the following commands:
-- dbt run
-- dbt test
+## Project Structure
 
+The project is organized as follows:
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+- **`models/`**: Contains dbt models for transforming the raw data into a star schema.
+  - **`stg_ecommerce_data.sql`**: Staging model that cleans and prepares the raw data.
+  - **`dim_customer.sql`**: Dimension table for customer data.
+  - **`dim_product.sql`**: Dimension table for product data.
+  - **`dim_date.sql`**: Dimension table for date data.
+  - **`fct_sales.sql`**: Fact table for sales data.
+  - **`total_sales_by_category.sql`**: Aggregates total sales amount for each product category.
+  - **`top_5_selling_products_us.sql`**: Identifies top 5 selling products in the US by quantity.
+  - **`quarterly_sales_comparison.sql`**: Compares total sales amount between the first and second quarters.
+  - **`sales_by_subcategory.sql`**: Shows sales breakdown by subcategory for the best-selling product category.
+  - **`monthly_sales_trend.sql`**: Displays monthly sales trend for the top-selling subcategory.
+  - **`top_customers_by_country.sql`**: Identifies top 3 customers in each country and their favorite product category.
+
