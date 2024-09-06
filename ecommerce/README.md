@@ -8,28 +8,6 @@ The project is organized as follows:
 
 - **`models/`**: Contains dbt models for transforming the raw data into a star schema.
   - **`stg_ecommerce_data.sql`**: Staging model that cleans and prepares the raw data.
-   ```sql
-   WITH raw_data AS (
-    SELECT
-        TransactionID,
-        -- Use TO_DATE without the format string if the date is already in a recognizable format
-        TO_DATE(Date) AS order_date,  
-        -- Alternatively, you can use CAST(Date AS DATE) to handle different date formats
-        CustomerID,
-        CustomerName,
-        CustomerCity,
-        CustomerCountry,
-        ProductID,
-        ProductName,
-        ProductCategory,
-        ProductSubcategory,
-        UnitPrice,
-        Quantity,
-        TotalAmount
-    FROM {{ source('raw', 'raw_ecommerce_data') }}  -- Replace with the actual name of your raw data table in source configuration
-)
-SELECT *
-FROM raw_data
   - **`dim_customer.sql`**: Dimension table for customer data.
   - **`dim_product.sql`**: Dimension table for product data.
   - **`dim_date.sql`**: Dimension table for date data.
@@ -40,4 +18,12 @@ FROM raw_data
   - **`sales_by_subcategory.sql`**: Shows sales breakdown by subcategory for the best-selling product category.
   - **`monthly_sales_trend.sql`**: Displays monthly sales trend for the top-selling subcategory.
   - **`top_customers_by_country.sql`**: Identifies top 3 customers in each country and their favorite product category.
+ 
+## Setup Instructions
+
+1. **Install dbt Core**:
+   ```bash
+   pip install dbt-core
+2. **Configure Snowflake**:
+Update profiles.yml with your Snowflake credentials.
 
