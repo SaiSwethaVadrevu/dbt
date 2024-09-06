@@ -46,5 +46,6 @@ Create and load the raw_ecommerce_data table with the CSV data.
    git add .
    git commit -m "Initial Commit"
    git push origin main
-  
-
+2. **Create a Pull Request**:
+- Create a branch submission, push changes, and open a pull request.
+- Include details on your approach, challenges, and documentation link.
