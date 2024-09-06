@@ -8,8 +8,8 @@ The project is organized as follows:
 
 - **`models/`**: Contains dbt models for transforming the raw data into a star schema.
   - **`stg_ecommerce_data.sql`**: Staging model that cleans and prepares the raw data.
-  - ---sql
-  - WITH raw_data AS (
+   ```sql
+   WITH raw_data AS (
     SELECT
         TransactionID,
         -- Use TO_DATE without the format string if the date is already in a recognizable format
