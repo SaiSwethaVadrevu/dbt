@@ -2,6 +2,8 @@
 
 This project demonstrates how to transform e-commerce transaction data into a star schema using dbt Core and Snowflake. The dataset consists of 10,000 rows of e-commerce transaction data, which includes information about transactions, customers, products, and sales.
 
+---
+
 ## Project Structure
 
 The project is organized as follows:
@@ -19,6 +21,8 @@ The project is organized as follows:
   - **`monthly_sales_trend.sql`**: Displays monthly sales trend for the top-selling subcategory.
   - **`top_customers_by_country.sql`**: Identifies top 3 customers in each country and their favorite product category.
 
+---
+
 ## Tech Stack
 
 - Snowflake
@@ -26,6 +30,8 @@ The project is organized as follows:
 - SQL
 - Python
 - Git & GitHub
+
+---
  
 ## Setup Instructions
 
@@ -46,6 +52,8 @@ Create and load the raw_ecommerce_data table with the CSV data.
     ```bash
    dbt docs generate
    dbt docs serve
+
+---
 
 ## Github Submission
 
