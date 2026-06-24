@@ -1,5 +1,7 @@
 # Overview
 
+---
+
 This project demonstrates how to transform e-commerce transaction data into a star schema using dbt Core and Snowflake. The dataset consists of 10,000 rows of e-commerce transaction data, which includes information about transactions, customers, products, and sales.
 
 ---
